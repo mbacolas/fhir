@@ -6,15 +6,14 @@ Description: "Description"
 * ^url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
 * ^version = "5.0.1"
 * ^experimental = false
-* ^date = "2022-04-20T15:02:49-07:00"
-* ^publisher = "HL7 International - Cross-Group Projects"
-* ^contact.name = "HL7 International - Cross-Group Projects"
+* ^date = "2023-03-01"
+* ^publisher = ""
+* ^contact.name = ""
 * ^contact.telecom[0].system = #url
-* ^contact.telecom[=].value = "http://www.hl7.org/Special/committees/cgp"
+* ^contact.telecom[=].value = ""
 * ^contact.telecom[+].system = #email
-* ^contact.telecom[=].value = "cgp@lists.HL7.org"
+* ^contact.telecom[=].value = ""
 * ^jurisdiction = urn:iso:std:iso:3166#US
-* ^copyright = "Used by permission of HL7 International, all rights reserved Creative Commons License"
 // * obeys us-core-6
 * . ^definition = "\\-"
 * . ^comment = "\\-"
@@ -34,7 +33,7 @@ Description: "Description"
 * identifier.system 1.. MS
 * identifier.value 1.. MS
 * identifier.value ^short = "The value that is unique within the system."
-* name 1.. MS
+* name 0.. MS
 * name.family MS
 * name.family ^condition = "us-core-6"
 * name.given MS
@@ -65,3 +64,10 @@ Description: "Description"
 * communication ^mustSupport = false
 * communication.language MS
 * communication.language from LanguageCodesWithLanguageAndOptionallyARegionModifier (extensible)
+
+// Instance: PatientExample
+// InstanceOf: SHINNYPatientProfile
+// Description: "An example of a patient with a license to krill."
+// * name
+//   * given[0] = "James"
+//   * family = "Pond"
