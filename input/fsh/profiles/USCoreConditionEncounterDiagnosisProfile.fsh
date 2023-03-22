@@ -34,7 +34,7 @@ Description: "The US Core Condition Encounter Diagnosis Profile is based upon th
 * code 1.. MS
 * code from $us-core-condition-code (extensible)
 * code ^binding.description = "Valueset to describe the actual problem experienced by the patient"
-* subject only Reference($us-core-patient)
+* subject only Reference(USCorePatientProfile)
 * subject MS
 * encounter only Reference(USCoreEncounterProfile)
 * encounter MS

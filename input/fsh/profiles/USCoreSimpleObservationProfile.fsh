@@ -27,14 +27,14 @@ Description: "The US Core Simple Observation Profile meets the requirements of t
 * code MS
 * code ^binding.strength = #preferred
 * subject 1.. MS
-* subject only Reference($us-core-patient)
+* subject only Reference(USCorePatientProfile)
 * effective[x] only dateTime or Period or Timing or instant
 * effective[x] MS
 * effective[x] ^definition = "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\"."
 * effective[x] ^comment = "At least a date should be present unless this observation is a historical report."
 * effective[x] ^type[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * effective[x] ^type[=].extension.valueBoolean = true
-* performer only Reference(USCorePractitionerProfile or USCoreOrganizationProfile or $us-core-patient or PractitionerRole or USCoreCareTeam or USCoreRelatedPersonProfile)
+* performer only Reference(USCorePractitionerProfile or USCoreOrganizationProfile or USCorePatientProfile or PractitionerRole or USCoreCareTeam or USCoreRelatedPersonProfile)
 * performer MS
 * value[x] only Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period
 * value[x] MS

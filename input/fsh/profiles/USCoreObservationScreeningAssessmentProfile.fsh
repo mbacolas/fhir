@@ -33,7 +33,7 @@ Description: "The US Core Observation Screening Assessment Profile meets the req
 * code MS
 * code from $us-core-survey-codes (preferred)
 * subject 1.. MS
-* subject only Reference($us-core-patient)
+* subject only Reference(USCorePatientProfile)
 * effective[x] only dateTime or Period or Timing or instant
 * effective[x] MS
 * effective[x] obeys us-core-1
@@ -42,7 +42,7 @@ Description: "The US Core Observation Screening Assessment Profile meets the req
 * effective[x] ^type[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * effective[x] ^type[=].extension.valueBoolean = true
 * effective[x] ^condition[0] = "us-core-1"
-* performer only Reference(USCorePractitionerProfile or USCoreOrganizationProfile or $us-core-patient or PractitionerRole or USCoreCareTeam or USCoreRelatedPersonProfile)
+* performer only Reference(USCorePractitionerProfile or USCoreOrganizationProfile or USCorePatientProfile or PractitionerRole or USCoreCareTeam or USCoreRelatedPersonProfile)
 * performer MS
 * performer ^comment = "Some questions on questionnaires are not answered directly (e.g., asserted) by the individual completing the questionnaire, but are derived from answers to one or more other questions. For types of answers, `Observation.performer` should not be specified and `Observation.derivedFrom` should reference the relevant Screening Response Observation(s)."
 * value[x] only Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period

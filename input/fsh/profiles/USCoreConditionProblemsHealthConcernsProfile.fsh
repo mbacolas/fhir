@@ -37,7 +37,7 @@ Description: "The US Core Condition Problems and Health Concerns Profile is base
 * code 1.. MS
 * code from $us-core-condition-code (extensible)
 * code ^binding.description = "Valueset to describe the actual problem experienced by the patient"
-* subject only Reference($us-core-patient)
+* subject only Reference(USCorePatientProfile)
 * subject MS
 * onset[x] only dateTime or Age or Period or Range or string
 * onset[x] MS

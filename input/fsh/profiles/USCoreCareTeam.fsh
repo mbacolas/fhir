@@ -22,10 +22,10 @@ Description: "This profile sets minimum expectations for the CareTeam resource f
 * status from CareTeamStatus (required)
 * status ^binding.description = "Indicates whether the team is current , represents future intentions or is now a historical record."
 * subject 1.. MS
-* subject only Reference($us-core-patient)
+* subject only Reference(USCorePatientProfile)
 * participant 1.. MS
 * participant.role 1..1 MS
 * participant.role from $2.16.840.1.113762.1.4.1099.30 (extensible)
 * participant.role ^binding.description = "Indicates specific responsibility of an individual within the care team, such as Primary physician, Team coordinator, Caregiver, etc."
 * participant.member 1.. MS
-* participant.member only Reference(USCorePractitionerProfile or USCoreOrganizationProfile or $us-core-patient or USCorePractitionerRoleProfile or USCoreCareTeam or USCoreRelatedPersonProfile)
+* participant.member only Reference(USCorePractitionerProfile or USCoreOrganizationProfile or USCorePatientProfile or USCorePractitionerRoleProfile or USCoreCareTeam or USCoreRelatedPersonProfile)

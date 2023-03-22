@@ -27,7 +27,7 @@ Description: "The US Core Procedure Profile is based upon the core FHIR Procedur
 * code 1.. MS
 * code from $us-core-procedure-code (extensible)
 * code ^binding.description = "Codes describing the type of  Procedure"
-* subject only Reference($us-core-patient)
+* subject only Reference(USCorePatientProfile)
 * subject MS
 * performed[x] only dateTime or Period or string or Age or Range
 * performed[x] MS

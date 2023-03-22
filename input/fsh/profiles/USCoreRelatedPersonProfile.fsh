@@ -18,7 +18,7 @@ Description: "This profile sets minimum expectations for the RelatedPerson resou
 * . ^definition = "\\-"
 * . ^comment = "\\-"
 * active 1.. MS
-* patient only Reference($us-core-patient)
+* patient only Reference(USCorePatientProfile)
 * patient MS
 * relationship MS
 * relationship ^condition = "us-core-14"

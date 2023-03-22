@@ -1,0 +1,5 @@
+ValueSet: SHINNYBundleType
+Id: mcode-histology-morphology-behavior-vs
+Title: "SHINNYBundleType"
+Description: "SHINNYBundleType"
+* exclude BundleType "message"

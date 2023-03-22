@@ -27,12 +27,12 @@ Description: "This profile sets minimum expectations for recording, searching, a
 * category[us-core] from $us-core-servicerequest-category (required)
 * code 1.. MS
 * code from $us-core-procedure-code (extensible)
-* subject only Reference($us-core-patient)
+* subject only Reference(USCorePatientProfile)
 * subject MS
 * occurrence[x] only Period or dateTime or Timing
 * occurrence[x] MS
 * occurrence[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * occurrence[x] ^type.extension.valueBoolean = true
 * authoredOn MS
-* requester only Reference(USCorePractitionerProfile or USCoreOrganizationProfile or $us-core-patient or PractitionerRole or USCoreRelatedPersonProfile or Device)
+* requester only Reference(USCorePractitionerProfile or USCoreOrganizationProfile or USCorePatientProfile or PractitionerRole or USCoreRelatedPersonProfile or Device)
 * requester MS

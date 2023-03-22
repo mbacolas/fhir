@@ -40,7 +40,7 @@ Description: "This profile sets minimum expectations for the CarePlan resource t
 * category[AssessPlan] = $careplan-category#assess-plan
 * category[AssessPlan] ^definition = "Type of plan."
 * category[AssessPlan] ^requirements = "Identifies what \"kind\" of plan this is to support differentiation between multiple co-existing plans; e.g. \"Home health\", \"psychiatric\", \"asthma\", \"disease management\", \"wellness plan\", etc."
-* subject only Reference($us-core-patient)
+* subject only Reference(USCorePatientProfile)
 * subject MS
 * subject ^definition = "Who care plan is for."
 * subject ^requirements = "Identifies the patient or group whose intended care is described by the plan."

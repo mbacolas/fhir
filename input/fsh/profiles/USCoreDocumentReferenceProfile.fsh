@@ -34,9 +34,9 @@ Description: "To promote interoperability and adoption through common implementa
 * category[us-core] from $us-core-documentreference-category (required)
 * category[us-core] ^binding.description = "The US Core DocumentReferences Type Value Set is a &#39;starter set&#39; of categories supported for fetching and storing clinical notes."
 * subject 1.. MS
-* subject only Reference($us-core-patient)
+* subject only Reference(USCorePatientProfile)
 * date MS
-* author only Reference(USCorePractitionerProfile or USCoreOrganizationProfile or $us-core-patient or USCorePractitionerRoleProfile or USCoreRelatedPersonProfile or Device)
+* author only Reference(USCorePractitionerProfile or USCoreOrganizationProfile or USCorePatientProfile or USCorePractitionerRoleProfile or USCoreRelatedPersonProfile or Device)
 * author MS
 * content MS
 * content.attachment MS

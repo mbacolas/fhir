@@ -29,7 +29,7 @@ Description: "This profile sets minimum expectations for the Encounter resource 
 * type from $us-core-encounter-type (extensible)
 * type ^binding.description = "Valueset to describe the Encounter Type"
 * subject 1.. MS
-* subject only Reference($us-core-patient)
+* subject only Reference(USCorePatientProfile)
 * participant MS
 * participant.type MS
 * participant.period MS
