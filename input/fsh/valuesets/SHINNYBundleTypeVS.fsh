@@ -1,5 +1,6 @@
 ValueSet: SHINNYBundleTypeVS
-Id: SHINNYBundleTypeVS-vs
+Id: SHINNYBundleTypeVS
 Title: "SHINNYBundleTypeVS"
-Description: "SHINNYBundleTypeSHINNYBundleTypeVS"
-* include $bundle-type#message
+Description: "SHINNYBundleTypeVS"
+// * include $bundle-type#message "a message only"
+* $bundle-type#message "The bundle is a message. The first resource is a MessageHeader."

@@ -15,6 +15,8 @@ Description: "Contains a collection of resources.  This is an extension of the b
 * timestamp 1..1 MS
 * total 0..0
 
+* entry.request.method from SHINNYHTTPVerbsVS (required)
+
 // Instance: MyExample
 // InstanceOf: SHINNYBundle
 // Description: "blah"

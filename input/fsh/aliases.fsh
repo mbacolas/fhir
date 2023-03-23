@@ -31,3 +31,4 @@ Alias: $us-core-sex-for-clinical-use = http://hl7.org/fhir/us/core/StructureDefi
 Alias: $v3-TribalEntityUS = http://terminology.hl7.org/ValueSet/v3-TribalEntityUS
 Alias: $us-core-tribal-affiliation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation
 Alias: $bundle-type = http://hl7.org/fhir/ValueSet/bundle-type
+Alias: $http-methods = http://hl7.org/fhir/ValueSet/http-verb
