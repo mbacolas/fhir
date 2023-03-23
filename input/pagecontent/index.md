@@ -1,13 +1,9 @@
 # SHIN-NY IG
 
 ## Introduction
-<!-- ![test](/Users/emmanuel.bacolas/app/SHIN-NY-IG/input/pagecontent/ny-infographic.png)
-<img src="./ny-infographic.png"  width="60%" height="30%">
-![ background image ]( /Users/emmanuel.bacolas/app/SHIN-NY-IG/input/pagecontent/ny-infographic.png )  -->
-
 The SHIN-NY IG extends from a limited set of US Core resource profiles to take advantage some of their extensions, terminilogy sets and value set bindings while relaxing many of the cardinality rules and contraints to allow for less than ideal data to be able to be transimited over the wire.  
 
-In its current iteration the SHIN-NY IG only has profiles on the resources below (as well as referenced resources).  This list will be extended to cover all resources necessary to support all ADT & ORU to FHIR transformations.
+In its current iteration the SHIN-NY IG only has profiles on the resources below.  This list will be extended to cover all resources necessary to support all ADT & ORU to FHIR transformations.
 
 - Bundle
 - Encounter
@@ -19,7 +15,8 @@ In its current iteration the SHIN-NY IG only has profiles on the resources below
 ---
 
 ## Supported REST API Calls
-It is exected that a reource id is always provided by the calling application 
+It is exected that a resource id is assigned by the by the calling application/FHIR Server which serves as a unique key to identify that resource.
+
 Meta.lastUpdated will be required to ensure resource bundles get processed in the appropriate order.
 
 unsported functionality:
