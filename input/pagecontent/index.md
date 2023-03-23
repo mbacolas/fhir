@@ -18,22 +18,6 @@ In its current iteration the SHIN-NY IG only has profiles on the resources below
 
 ---
 
-
-## Background
-
-The SHIN-NY Data lake 
-add architecture diagram of data lake
-
-## Gaps 
-
-Remaining items to be done:
-- [ ] restrict the following terminology sets to only include
-
-
-## Suggestions
-
-- Add Pracitioner extensions in all resources such as a Encounter and Condition to allow for nested Practitioner resources instead of references.
-
 ## Supported REST API Calls
 It is exected that a reource id is always provided by the calling application 
 Meta.lastUpdated will be required to ensure resource bundles get processed in the appropriate order.
@@ -46,11 +30,20 @@ unsported functionality:
 - graphql
 
 supported API calls/routes 
-'
-https://hapi.fhir.org/baseR4/Bundle/123
+'https://shinny.org/baseR4/Bundle/123'
 
-'
-POST, PUT, DELETE Bundle
-unsupported API calls (search)
+Supported methods:
+- POST
+- PUT
+- DELETE
 
-"resourceType": "OperationOutcome",
+"resourceType": "OperationOutcome"
+
+## Gaps 
+
+Remaining items to be done:
+- [ ] restrict the following terminology sets to only include
+
+## Suggestions
+
+- Add Pracitioner extensions in all resources such as a Encounter and Condition to allow for nested Practitioner resources instead of references.

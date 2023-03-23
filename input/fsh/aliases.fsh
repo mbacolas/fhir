@@ -30,3 +30,4 @@ Alias: $detailed-race = http://hl7.org/fhir/us/core/ValueSet/detailed-race
 Alias: $us-core-sex-for-clinical-use = http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex-for-clinical-use
 Alias: $v3-TribalEntityUS = http://terminology.hl7.org/ValueSet/v3-TribalEntityUS
 Alias: $us-core-tribal-affiliation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation
+Alias: $bundle-type = http://hl7.org/fhir/ValueSet/bundle-type
