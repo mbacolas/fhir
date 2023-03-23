@@ -14,8 +14,18 @@ Description: "Contains a collection of resources.  This is an extension of the b
 * meta only SHINNYMeta
 * timestamp 1..1 MS
 * total 0..0
+* link 0..0
 
 * entry.request.method from SHINNYHTTPVerbsVS (required)
+* entry.request.method  ^short = "POST | PUT | DELETE"
+* entry.request.ifNoneMatch 0..0
+* entry.request.ifMatch 0..0
+* entry.request.ifNoneExist 0..0
+
+* entry.response.lastModified 0..0
+* entry.response.location 0..0
+* entry.response.etag 0..0
+* signature 0..0
 
 // Instance: MyExample
 // InstanceOf: SHINNYBundle

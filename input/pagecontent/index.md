@@ -39,6 +39,15 @@ Supported methods:
 
 "resourceType": "OperationOutcome"
 
+## High Level Architecture
+<!-- ![](/Users/emmanuel.bacolas/app/SHIN-NY-IG/input/pagecontent/data_lake_architecture.png) -->
+<!-- *Data Ingest Workflow* -->
+
+
+<img src="/Users/emmanuel.bacolas/app/SHIN-NY-IG/input/pagecontent/data_lake_architecture.png"  width="1200" height="600">
+*Data Ingest Workflow* 
+
+
 ## Gaps 
 
 Remaining items to be done:
