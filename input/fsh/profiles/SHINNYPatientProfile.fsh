@@ -10,7 +10,8 @@ Description: "Extends the USCorePatientProfile while relaxing some of the contra
 * identifier 1.. MS
 * identifier.system 1.. MS
 * identifier.value 1.. MS
-* identifier.value ^short = "The value that is unique within the system.  It MUST contain a single instance of MR (Medical record number)"
+// * identifier.value ^short = "The value that is unique within the system.  It MUST contain a single instance of MR (Medical record number)"
+* identifier.type ^short = "	Description of identifier.  It MUST contain a single instance of MR (Medical record number)"
 * name 0..1 MS
 * name.family MS
 * name.given MS
