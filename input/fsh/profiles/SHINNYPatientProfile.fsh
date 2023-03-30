@@ -10,7 +10,17 @@ Description: "Extends the USCorePatientProfile while relaxing some of the contra
 * identifier 1..* MS
 * identifier.system 1.. MS
 * identifier.value 1.. MS
+* identifier.type 1.. MS
 * identifier.type ^short = "Description of identifier.  It MUST contain a single instance of MR (Medical record number)"
+
+
+// * race MS
+// * ethnicity MS
+// * gender_identity MS
+// * birthSex MS
+* telecom MS
+* deceased[x] MS
+
 // * name 0..1 MS
 // * name.family MS
 // * name.given MS
