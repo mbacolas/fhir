@@ -62,8 +62,9 @@ providing detailed information about the outcome of an attempted system operatio
 <!-- ![](/Users/emmanuel.bacolas/app/SHIN-NY-IG/input/pagecontent/data_lake_architecture.png) -->
 <!-- *Data Ingest Workflow* -->
 
-
-<img src="/Users/emmanuel.bacolas/app/SHIN-NY-IG/input/pagecontent/data_lake_architecture.png" width="1200" height="600">
+<!-- https://nyehealth.sharepoint.com/:f:/s/Extranet-DataLake/EgOsyaspHcRHrLpTICDpcBgBWCL9p5u0Il1SshhyNNzLOg?e=tr85wZ -->
+<img src="data_lake_architecture.png" width="1200" height="600">
+<!-- <img src="data_lake_architecture.png" width="1200" height="600"> -->
 
 *Data Ingest Workflow* 
 

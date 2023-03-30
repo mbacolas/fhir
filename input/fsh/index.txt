@@ -1,6 +1,5 @@
 Name                                                                Type       File
 LanguageCodesWithLanguageAndOptionallyARegionModifier               ValueSet   valuesets/LanguageCodesWithLanguageAndOptionallyARegionModifier.fsh
-TransactionBundle                                                   Profile    profiles/TransactionBundle.fsh
 USCoreBirthSexExtension                                             Extension  extensions/USCoreBirthSexExtension.fsh
 USCoreCarePlanProfile                                               Profile    profiles/USCoreCarePlanProfile.fsh
 USCoreCareTeam                                                      Profile    profiles/USCoreCareTeam.fsh

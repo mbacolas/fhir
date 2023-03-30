@@ -30,7 +30,7 @@ Description: "The US Core Patient Profile meets the U.S. Core Data for Interoper
 * extension[birthsex] ^mustSupport = false
 * extension[sex-for-clinical-use] ^mustSupport = false
 * extension[genderIdentity] ^mustSupport = false
-* identifier 1.. MS
+* identifier 1..* MS
 * identifier.system 1.. MS
 * identifier.value 1.. MS
 * identifier.value ^short = "The value that is unique within the system."

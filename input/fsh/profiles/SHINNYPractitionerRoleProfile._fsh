@@ -1,0 +1,5 @@
+Profile: SHINNYPractitionerRoleProfile
+Parent: USCorePractitionerRoleProfile
+Id: shin-ny-practitioner-role
+Title: "SHINNY Practitioner Role Profile"
+// Description: "A person with a formal responsibility in the provisioning of healthcare or related services"

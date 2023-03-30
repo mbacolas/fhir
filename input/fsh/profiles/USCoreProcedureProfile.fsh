@@ -25,7 +25,7 @@ Description: "The US Core Procedure Profile is based upon the core FHIR Procedur
 * status from EventStatus (required)
 * status ^condition = "us-core-7"
 * code 1.. MS
-* code from $us-core-procedure-code (extensible)
+* code from $us-core-procedure-code (preferred)
 * code ^binding.description = "Codes describing the type of  Procedure"
 * subject only Reference(USCorePatientProfile)
 * subject MS
