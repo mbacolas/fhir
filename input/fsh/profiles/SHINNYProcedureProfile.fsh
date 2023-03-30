@@ -26,7 +26,8 @@ Description: "An action that is being or was performed on a patient"
 * bodySite MS
 * outcome MS
 * complication MS
-* complication only Reference(SHINNYDiagnosisProfile)
 * complicationDetail MS
+* complicationDetail only Reference(SHINNYDiagnosisProfile)
+
 
 // * code from $us-core-procedure-code (preferred)
