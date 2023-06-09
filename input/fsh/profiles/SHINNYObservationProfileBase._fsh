@@ -1,0 +1,45 @@
+Profile: SHINNYObservationProfileBase
+Parent: Observation
+Id: shin-ny-observation-base
+Title: "SHINNY Observation Profile (Parent: Observation)"
+Description: "Measurements and simple assertions"
+
+* referenceRange MS
+
+* status MS
+* category 1.. MS
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains us-core 0..* MS
+// * category from $us-core-simple-observation-category (required)
+* category[us-core] ^min = 0
+* code from http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category (preferred)
+* code ^short = "Type of observation (code / type).  us-core-simple-observation-category is a preferred category but a local code system 
+is allowed if that is what the source has provided."
+* code MS
+* code ^binding.strength = #preferred
+* subject 1.. MS
+* subject only Reference(SHINNYPatientProfile)
+* effective[x] only dateTime or Period or Timing or instant
+* effective[x] MS
+* effective[x] ^definition = "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\"."
+* effective[x] ^comment = "At least a date should be present unless this observation is a historical report."
+* effective[x] ^type[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* effective[x] ^type[=].extension.valueBoolean = true
+* performer MS
+* performer only Reference(USCorePractitionerProfile or USCorePractitionerRoleProfile)
+* value[x] only Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period
+* value[x] MS
+* value[x] ^type[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* value[x] ^type[=].extension.valueBoolean = true
+* value[x] ^type[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* value[x] ^type[=].extension.valueBoolean = true
+* value[x] ^type[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* value[x] ^type[=].extension.valueBoolean = true
+* value[x] ^type[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* value[x] ^type[=].extension.valueBoolean = true
+* derivedFrom only Reference(USCoreObservationScreeningAssessmentProfile or USCoreDocumentReferenceProfile or QuestionnaireResponse or ImagingStudy or Media or MolecularSequence)
+* derivedFrom MS
+* derivedFrom ^short = "Related Observation(s) or other resource the observation is made from"
+* derivedFrom ^definition = "Observations or or other resource such as a QuestionnaireResponse from which this observation value is derived."

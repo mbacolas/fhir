@@ -28,10 +28,12 @@ Description: "An interaction during which services are provided to the patient. 
 // * participant.individual ^constraint[=].severity = #error
 // * participant ^constraint[+]. = "A participant must be present. If unavailable the Data Absent Reason Extension is present."
 
-* appointment 0..* MS
-* diagnosis 0..1 MS
-* diagnosis.id 1..1 MS
+* appointment  MS
+* diagnosis MS
+* diagnosis.id 0..1 MS
 * diagnosis.condition MS
+* diagnosis.condition only Reference(SHINNYDiagnosisProfile or SHINNYProcedureProfile)
+* partOf only Reference(SHINNYEncounterProfile)
 
 * hospitalization.origin MS
 * hospitalization.admitSource MS

@@ -11,3 +11,4 @@ Description: "Detailed information about a diagnosis"
 * encounter only Reference(SHINNYEncounterProfile)
 * stage MS
 * evidence MS
+* severity MS

@@ -4,12 +4,12 @@ Description: "Contains a collection of resources.  This is an extension of the b
 * ^status = #draft
 * ^experimental = false
 
-* id 1..1 MS
-* identifier 0..1 MS
+* id 0..1
+* identifier 0..1
 * entry.search 0..0
 // * type from http://hl7.org/fhir/ValueSet/bundle-type (required)
 * type from SHINNYBundleTypeVS (required)
-* type ^short = "Only type 'message' is supported"
+// * type ^short = "Only type 'message' is supported"
 * meta 1..1 MS
 * meta only SHINNYMeta
 * timestamp 1..1 MS

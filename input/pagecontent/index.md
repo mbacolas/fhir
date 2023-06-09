@@ -29,11 +29,11 @@ The data lake Rest API will only support the following HTTP methods and routes:
 
 | Route                                 | HTTP Method | Action                                                       |
 |---------------------------------------|-------------|--------------------------------------------------------------|
-| http://shinny.org/Bundle/             | POST        | Create a new set of resource                                 |
-| http://shinny.org/Bundle/:resource_id | PUT         | Update all existing set of resources contained in the Bundle |
+| http://shinny.org/Bundle/             | POST        | Create or Update a resource                                 |
 | http://shinny.org/Bundle/:resource_id | DELETE      | DELETE an all existing resources contained in the Bundle     |
 
 The data lake API will *not support* the full set of FHIR routes that are supported by a typical FHIR Server.  
+
 Routes such as the ones below will not be supported:
 
 - _history 
@@ -49,10 +49,8 @@ It is not expected that a *resource id* is provided in the URI during a POST cal
 All *resource ids* in the URI will always be ignored since the Bundle resource is not persisted.   
 
 HTTP method recommendations:
-- Always use POST for CREATE operations.
-- Always use PUT for UPDATE operations.
-- POST is NOT idempotent. If a request is submitted N times the resources contained in it will be created N times 
-within the data lake
+- Always use POST for CREATE & UPDATE operations.
+- POST is idempotent. If a request is submitted N times with the SAME resource Id the resources contained will NOT be created N times within the data lake
 - The Meta.lastUpdated attribute will be required to ensure FHIR resources get processed in the appropriate order.
 
 If an error occurs during the processing of any HTTP call a FHIR OperationOutcome resource will be returned 

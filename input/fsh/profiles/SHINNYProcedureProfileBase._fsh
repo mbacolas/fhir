@@ -1,0 +1,46 @@
+Profile: SHINNYProcedureProfileBase
+Parent: Procedure
+Id: shin-ny-procedure-base
+Title: "SHINNY Procedure Profile (Parent: Procedure)"
+Description: "An action that is being or was performed on a patient"
+
+
+* language MS
+* basedOn MS
+* partOf MS
+* partOf only Reference(SHINNYProcedureProfile or SHINNYObservationProfile)
+* subject only Reference(SHINNYPatientProfile)
+* performer MS
+* performer.actor only Reference(USCorePractitionerProfile or USCorePractitionerRoleProfile)
+* location MS
+* reasonCode MS
+* reasonReference MS
+* reasonReference only Reference(SHINNYDiagnosisProfile or SHINNYProcedureProfile or SHINNYObservationProfile)
+* bodySite MS
+* outcome MS
+* complication MS
+* complicationDetail MS
+* complicationDetail only Reference(SHINNYDiagnosisProfile)
+
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-04-20"
+* obeys us-core-7
+* . ^definition = "\\-"
+* . ^comment = "\\-"
+* . ^mustSupport = false
+* basedOn only Reference(USCoreCarePlanProfile or USCoreServiceRequestProfile)
+* basedOn ^mustSupport = false
+* status MS
+* status from EventStatus (required)
+* status ^condition = "us-core-7"
+* code 1.. MS
+* code from $us-core-procedure-code (preferred)
+* code ^binding.description = "Codes describing the type of  Procedure"
+* subject only Reference(SHINNYPatientProfile)
+* subject MS
+* performed[x] only dateTime or Period or string or Age or Range
+* performed[x] MS
+* performed[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performed[x] ^type.extension.valueBoolean = true
+* performed[x] ^condition = "us-core-7"
