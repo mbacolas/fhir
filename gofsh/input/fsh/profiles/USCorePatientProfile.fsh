@@ -30,16 +30,26 @@ Description: "The US Core Patient Profile meets the U.S. Core Data for Interoper
 * extension[birthsex] ^mustSupport = false
 * extension[sex-for-clinical-use] ^mustSupport = false
 * extension[genderIdentity] ^mustSupport = false
-* identifier 1..* MS
+* identifier 1.. MS
 * identifier.system 1.. MS
 * identifier.value 1.. MS
 * identifier.value ^short = "The value that is unique within the system."
-* name 0.. MS
-* name ^constraint[1].key = "us-core-6"
-* name ^constraint[=].severity = #error
-* name ^constraint[=].human = "At least name.given and/or name.family are present or, if neither is available, the Data Absent Reason Extension is present."
-* name ^constraint[=].expression = "(family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
-* name ^constraint[=].xpath = "(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:family or /f:given)) or (not(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:family or /f:given))"
+* name MS
+// WARNING: The constraint index in the following rule (e.g., constraint[0]) may be incorrect.
+// Please compare with the constraint array in the original definition's snapshot and adjust as necessary.
+* name ^constraint.key = "us-core-6"
+// WARNING: The constraint index in the following rule (e.g., constraint[0]) may be incorrect.
+// Please compare with the constraint array in the original definition's snapshot and adjust as necessary.
+* name ^constraint.severity = #error
+// WARNING: The constraint index in the following rule (e.g., constraint[0]) may be incorrect.
+// Please compare with the constraint array in the original definition's snapshot and adjust as necessary.
+* name ^constraint.human = "At least name.given and/or name.family are present or, if neither is available, the Data Absent Reason Extension is present."
+// WARNING: The constraint index in the following rule (e.g., constraint[0]) may be incorrect.
+// Please compare with the constraint array in the original definition's snapshot and adjust as necessary.
+* name ^constraint.expression = "(family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
+// WARNING: The constraint index in the following rule (e.g., constraint[0]) may be incorrect.
+// Please compare with the constraint array in the original definition's snapshot and adjust as necessary.
+* name ^constraint.xpath = "(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:family or /f:given)) or (not(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:family or /f:given))"
 * name.family MS
 * name.family ^condition = "us-core-6"
 * name.given MS
@@ -54,13 +64,7 @@ Description: "The US Core Patient Profile meets the U.S. Core Data for Interoper
 * telecom.use MS
 * telecom.use from ContactPointUse (required)
 * gender 1.. MS
-* gender only code
 * gender from AdministrativeGender (required)
-
-// * extension[birthsex] from http://hl7.org/fhir/us/core/ValueSet/birthsex (preferred)
-// * birthsex from $birthSex (preferred)
-
-
 * birthDate MS
 * address MS
 * address.line MS

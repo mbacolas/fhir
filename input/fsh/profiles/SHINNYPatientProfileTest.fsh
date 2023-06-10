@@ -1,9 +1,9 @@
-Profile: SHINNYPatientProfile
+Profile: SHINNYPatientProfileTest
 Parent: Patient
-Id: shinny-patient
-Title: "SHINNY Patient Profile"
+Id: shinny-patient-test
+Title: "SHINNY Patient Profile Test"
 Description: "Description"
-* ^url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+// * ^url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
 * ^version = "5.0.1"
 * ^experimental = false
 * ^date = "2023-03-01"
@@ -13,7 +13,7 @@ Description: "Description"
 * ^contact.telecom[=].value = ""
 * ^contact.telecom[+].system = #email
 * ^contact.telecom[=].value = ""
-* ^jurisdiction = urn:iso:std:iso:3166#US
+// * ^jurisdiction = urn:iso:std:iso:3166#US
 // * obeys us-core-6
 * . ^definition = "\\-"
 * . ^comment = "\\-"
@@ -47,9 +47,9 @@ Description: "Description"
 * telecom.value 1.. MS
 * telecom.use MS
 * telecom.use from ContactPointUse (required)
-* gender 1.. MS
+* gender 0.. MS
 * gender only code
-* gender from AdministrativeGender (required)
+// * gender from AdministrativeGender (preferred)
 * birthDate MS
 * address MS
 * address.line MS

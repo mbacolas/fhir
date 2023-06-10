@@ -12,9 +12,13 @@ Description: "Extends the USCorePatientProfile while relaxing some of the contra
 * identifier.value 1.. MS
 * identifier.type 1.. MS
 * identifier.type ^short = "Description of identifier.  It MUST contain a single instance of MR (Medical record number)"
-
 * extension[birthsex] ^mustSupport = false
-* extension[birthsex] $birthsex (preferred)
+
+// * identifier.type from  http://hl7.org/fhir/ValueSet/identifier-use (preferred)
+// * gender from http://hl7.org/fhir/ValueSet/administrative-gender (preferred)
+// * extension[birthsex] from http://hl7.org/fhir/us/core/ValueSet/birthsex (preferred)
+// * birthsex from $birthSex (preferred)
+
 // * link only Reference(SHINNYPatientProfile or USCoreRelatedPersonProfile)
 
 // * race MS
