@@ -25,6 +25,7 @@ Description: "Extends the USCorePatientProfile while relaxing some of the contra
 // * ethnicity MS
 // * gender_identity MS
 // * birthSex MS
+
 * telecom MS
 * deceased[x] MS
 

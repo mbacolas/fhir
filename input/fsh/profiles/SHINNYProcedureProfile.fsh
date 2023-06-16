@@ -10,7 +10,11 @@ Description: "An action that is being or was performed on a patient"
 
 // * code from $us-core-procedure-code (preferred)
 // * code ^binding.description = "Codes describing the type of  Procedure"
-// * status 0..
+// * status 0..1
+* meta 1..1 MS
+* meta only SHINNYMeta
+* id 1..1 MS
+* id  ^short = "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."
 
 * language MS
 * basedOn MS
@@ -28,6 +32,10 @@ Description: "An action that is being or was performed on a patient"
 * complication MS
 * complicationDetail MS
 * complicationDetail only Reference(SHINNYDiagnosisProfile)
+
+* encounter only Reference(SHINNYEncounterProfile)
+* subject only Reference(SHINNYPatientProfile)
+
 
 
 // * code from $us-core-procedure-code (preferred)

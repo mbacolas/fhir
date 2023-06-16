@@ -66,6 +66,41 @@ providing detailed information about the outcome of an attempted system operatio
 
 *Data Ingest Workflow* 
 
+## SHINNY Data Lake Open API 
+
+<a href="shinny_data_lake_open_api.yaml" download>Click to Download</a>
+
+## API Endpoints
+| QE Name                               | ENV | API Endpoint                                                       |
+|---------------------------------------|-------------|--------------------------------------------------------------|
+|     Bronx RHIO     | DEV        | https://5hlpkcpksa.execute-api.us-east-1.amazonaws.com/dev       |
+|     HEALTHeLINK     | DEV        | https://7kf806hh44.execute-api.us-east-1.amazonaws.com/dev       |
+|     Healthix     | DEV        | https://u8f4ckrx73.execute-api.us-east-1.amazonaws.com/dev       |
+|     HealtheConnections     | DEV        | https://ozr8udz0re.execute-api.us-east-1.amazonaws.com/dev       |
+|     Hixny     | DEV        | https://ggexmhfffg.execute-api.us-east-1.amazonaws.com/dev       |
+|     Rochester RHIO     | DEV        | https://go2j9ega88.execute-api.us-east-1.amazonaws.com/dev       |
+
+## Release Notes
+*Fixes and New Additions*
+
+### June 14th 2023
+
+- Added a SHINNY Data Lake Open API download link to this page
+- Changed the Bundle.type to support only *transaction*
+- Removed HTTP PUT from the SHINNYHTTPVerbsVS.  Only POST and DELETE are now supported
+- Made *Meta* required in the SHINNYObservation & Procedure (this is required for all resources)
+- Made *id* required in the SHINNYObservation & Procedure (this is required for all resources)
+- Changed SHINNYProcedure.subject reference to SHINNYPatientProfile
+- Changed SHINNYProcedure.encounter reference to SHINNYEncounterProfile
+- Changed SHINNYDiagnosis.meta to SHINNYMeta
+- Changed SHINNYProcedure.recorder to include SHINNYPatientProfile
+- Changed SHINNYProcedure.asserter to include SHINNYPatientProfile
+
+### June 16th 2023
+- QE API Endpoints were added to this document
+- Encounter.episodeOfCare cardinality was changed from 0..1 to 0..*
+
+
 [//]: # ()
 [//]: # (## Gaps )
 

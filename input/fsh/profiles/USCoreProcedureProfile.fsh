@@ -34,3 +34,5 @@ Description: "The US Core Procedure Profile is based upon the core FHIR Procedur
 * performed[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * performed[x] ^type.extension.valueBoolean = true
 * performed[x] ^condition = "us-core-7"
+* recorder only Reference(SHINNYPatientProfile or RelatedPerson or Practitioner or PractitionerRole)
+* asserter only Reference(SHINNYPatientProfile or RelatedPerson or Practitioner or PractitionerRole)

@@ -13,7 +13,7 @@ Description: "An interaction during which services are provided to the patient. 
 * serviceType 0..1 MS
 * subject only Reference(SHINNYPatientProfile)
 // * subjectStatus  0..1 MS
-* episodeOfCare 0..1 MS
+* episodeOfCare 0..* MS
 // * basedOn only Reference(CarePlan or ServiceRequest)
 
 
@@ -21,8 +21,7 @@ Description: "An interaction during which services are provided to the patient. 
 
 * participant 0..* MS
 * participant.individual 1..1 MS
-* participant.individual only Reference(USCorePractitionerProfile or USCorePractitionerRoleProfile)
-
+// * participant.individual only Reference(USCorePractitionerProfile or USCorePractitionerRoleProfile or US CoreRelatedPersonProfile)
 
 // * participant.individual ^constraint[1].key = "us-core-6"
 // * participant.individual ^constraint[=].severity = #error
